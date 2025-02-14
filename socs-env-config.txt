@@ -1,0 +1,15 @@
+# <<< when cloning a local copy of the repo, as a scratch area >>>
+git clone git@github.com:auchipgroup/core-v-mcu-socs.git
+cd core-v-mcu-socs
+python3 -m venv vvv        # create the python virtual environment, this creates the vvv dir
+echo 'vvv' >> .gitignore   # add the vvv dir to the gitignore
+source vvv/bin/activate    # activate virtual env
+pip3 install -r python-requirements.txt  # load relevant python packages
+
+# <<< when cloning the definitive SoCS repo >>>
+git clone git@github.com:auchipgroup/core-v-mcu-socs.git
+cd core-v-mcu-socs
+python3 -m venv vvv        # create the python virtual environment, this creates the vvv dir
+source vvv/bin/activate    # activate virtual env
+pip3 install -r python-requirements.txt  # load relevant python packages
+
